@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    background-color: #974EC3;
+    min-height: 95vh;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+  }
+  .nav_image {
+    display: flex;
+    min-width: 55px;
+    justify-content: center;
+  }
+  .nav_image img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+.cartoon_title{
+    font-family: 'Bungee', sans-serif;
+    text-align: left;
+    font-size: 50px;
+    color: #ffffff;
+    padding-left: 40px;
+    text-shadow: 4px 6px 0px #000;
+    -webkit-text-stroke: 0.5px #000000;
+}
+
+.subtitle {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 3px 0px #000;
+    -webkit-text-stroke: 0.5px #000000;
+    
+}
+
+/* Sugerencias */
+.suggestions-icons {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px 0 70px;
+    padding-left: 400px;
+    background-color: #974EC3;
+}
+
+.icon-link img {
+    width: 80px;  /* Ajusta el tamaño según lo requieras */
+    height: 80px;
+    transition: 0.3s;
+}
+
+.icon-link:hover img {
+    transform: scale(1.1);  /* Un pequeño efecto al pasar el mouse por encima */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 110px;
+    left: 20px;
+    height: 75%;
+    width: 270px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    box-shadow: 4px 6px 0px #000;
+    border-style: solid;
+  }
+  .sidebar.close {
+    width: calc(75px);
+  }
+  .logo_items {
+    gap: 8px;
+  }
+  .logo_name {
+    font-size: 22px;
+    color: #333;
+    font-weight: 500px;
+    transition: all 0.3s ease;
+  }
+  .sidebar.close .logo_name,
+  .sidebar.close #lock-icon,
+  .sidebar.close #sidebar-close {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #lock-icon,
+  #sidebar-close {
+    padding: 10px;
+    color: #4070f4;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: -4px;
+    transition: all 0.3s ease;
+  }
+  #sidebar-close {
+    display: none;
+    color: #333;
+  }
+  .menu_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    overflow-y: auto;
+    height: calc(100% - 82px);
+  }
+  .menu_container::-webkit-scrollbar {
+    display: none;
+  }
+  .menu_title {
+    position: relative;
+    height: 50px;
+    width: 55px;
+  }
+  .menu_title .title {
+    margin-left: 15px;
+    transition: all 0.3s ease;
+  }
+  .sidebar.close .title {
+    opacity: 0;
+  }
+  .menu_title .line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 20px;
+    border-radius: 25px;
+    background: #aaa;
+    transition: all 0.3s ease;
+  }
+  .menu_title .line {
+    opacity: 0;
+  }
+  .sidebar.close .line {
+    opacity: 1;
+  }
+  .item {
+    list-style: none;
+  }
+  .link {
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #000000;
+  }
+  .link:hover {
+    color: #fff;
+    background-color: #974EC3;
+  }
+  .link span {
+    white-space: nowrap;
+  }
+  .link i {
+    height: 50px;
+    min-width: 55px;
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  
+  /* Navbar */
+  .navbar_search {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    left: 300px;
+    /* transform: translateX(-50%); */
+    padding: 10px;
+    border-radius: 25px;
+    justify-content: space-between;
+  }
+  .accessbuttons{
+    position: relative;
+  }
+
+  .accessbuttons:hover{
+    transform: translateY(-5px);
+  }
+
+  #sidebar-open {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    margin-right: 20px;
+    display: none;
+  }
+  .input-container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-radius: 25px;
+    box-shadow: 4px 6px 0px #000;
+}
+
+
+.search_box {
+    font-family: 'Poppins', sans-serif;
+    height: 46px;
+    width: 100%;
+    border: 1px solid #aaa;
+    outline: none;
+    border-radius: 25px;
+    padding: 0 40px 0 15px; /* Espacio adicional en el lado derecho para el icono */
+    font-size: 18px;
+    color: #333;
+}
+
+.input-container i {
+    position: absolute;
+    right: 10px;
+    left: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Asegura que el clic en el icono no afecte el input */
+    font-size: 24px; /* Tamaño del ícono (puedes ajustarlo según tus necesidades) */
+    color: #aaa; /* Color del ícono (puedes ajustarlo según tus necesidades) */
+}
+
+.navbar img {
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+}
+ /* Responsive */
+@media screen and (max-width: 1100px) {
+    .navbar {
+      left: 65%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .sidebar {
+      left: 0;
+      z-index: 1000;
+    }
+    .sidebar.close {
+      left: -100%;
+    }
+    #sidebar-close {
+      display: block;
+    }
+    #lock-icon {
+      display: none;
+    }
+    .navbar {
+      left: 0;
+      max-width: 100%;
+      transform: translateX(0%);
+    }
+    #sidebar-open {
+      display: block;
+    }
+}
+
+.card {
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 8px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.2s;
+}
+
+.card2{
+  display: flex;
+  height: 150px;
+  }
+
+.newscard{
+  display: flex;
+  width: 500px;
+  }
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.Happy_Card:hover{
+    transform: translateY(-5px);
+}
+
+.newscard:hover{
+  transform: translateY(-5px);
+}
+
+.card-container {
+    /* width: 1000px; */
+    right:200px;
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 20px;
+    padding-left: 300px;
+} 
+
+.card-container1 {
+  top: 55%;
+  gap: 20px;
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  height: 60%;
+  display: inline;
+  width: 250px;
+} 
+
+.Happy_Card {
+  /* border: 1px solid #e0e0e0; */
+  border-radius: 8px;
+  overflow: hidden;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.2s;
+}
+
+
+.card-img {
+    display: inline;
+    width: 250px;
+}
+
+/* .card-content {
+    padding: 16px;
+} */
+
+/* .card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+} */
+
+/* .card-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 16px;
+} */
+
+/* .card-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+} */
+
+.card-button:hover {
+    background-color: #2980b9;
+}
